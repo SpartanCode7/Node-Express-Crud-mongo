@@ -1,0 +1,46 @@
+
+##  -- For get tokem
+GET http://localhost:5000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoia3lsZSIsImlhdCI6MTY0OTY3OTAxM30.UKF7liHazStoiS2xxYIRHP5UvaU7D0gwrGy-RE5XUXw
+
+
+#### -- Get Data According to Token
+POST http://localhost:5000/login 
+Content-Type: application/json
+
+{
+    "username": "Kyle"
+}
+
+###  -- Get All.
+GET http://localhost:5000/categories/
+
+### -- Creating One.
+POST http://localhost:5000/categories
+Content-Type: application/json
+ 
+{
+    "cateName": "Al Fahad cateName 05....",
+    "cateDiscription": "Al Fahad cateDiscription....",
+    "cateSlug": "Al Fahad cateSlug....",
+    "catPermalink": "Al Fahad catPermalink...."
+}
+
+### -- Get Single Entry in Categories
+GET http://localhost:5000/categories/6266947ee77902cf6948aecb
+
+### --- Delete
+
+DELETE http://localhost:5000/categories/628616fc803a499bc6c9a95d
+
+####    
+
+PATCH http://localhost:5000/categories/6286172eedf2ba8542e24f32
+Content-Type: application/json
+
+{
+    "cateName": "New Launching Al Fahad Store...Name of your first choice",
+    "cateDiscription": "Al Fahad catecategory....",
+    "cateSlug": "Al Fahad cateSlug....",
+    "catPermalink": "Al Fahad catPermalink...."
+}
