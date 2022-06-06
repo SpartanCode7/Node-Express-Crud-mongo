@@ -1,19 +1,34 @@
 const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
-const categoriesSchma = new Schema({
-    cateName: {
+const productSchma = new Schema({
+    name: {
         type: String
     },
-    cateDiscription: {
+    discription: {
         type: String
     },
-    cateSlug: { 
+    permalink: { 
         type: String
     },
-    catPermalink: {
+    location: {
+        type: String
+    },
+    price: {
+        type: String
+    },
+    discount: {
+        type: String
+    },
+    taxstatus: {
+        type: String
+    },
+    taxclass: {
+        type: String
+    },
+    currency: {
         type: String
     }
 }) 
 
-module.exports = mongoose.model('categories', categoriesSchma)
+module.exports = mongoose.model('products', productSchma)

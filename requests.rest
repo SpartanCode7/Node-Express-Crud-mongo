@@ -12,6 +12,8 @@ Content-Type: application/json
     "username": "Kyle"
 }
 
+### --- Categories
+
 ###  -- Get All.
 GET http://localhost:5000/categories/
 
@@ -43,4 +45,49 @@ Content-Type: application/json
     "cateDiscription": "Al Fahad catecategory....",
     "cateSlug": "Al Fahad cateSlug....",
     "catPermalink": "Al Fahad catPermalink...."
+}
+
+
+#### --------  Products  --------- ####
+
+
+###  -- Get All.
+GET http://localhost:5000/products/
+
+####
+
+POST http://localhost:5000/products
+Content-Type: application/json
+ 
+{
+    "name": "Al Fahad cateName 05....",
+    "discription": "Al Fahad cateDiscription....",
+    "permalink": "Al Fahad cateSlug....",
+    "location": "Al Fahad catPermalink....",
+    "price": "Al Fahad cateName 05....",
+    "discount": "Al Fahad cateDiscription....",
+    "taxstatus": "Al Fahad cateSlug....",
+    "taxclass": "Al Fahad catPermalink....",
+    "currency": "Al Fahad catPermalink...."
+}
+
+### --- Delete
+
+DELETE http://localhost:5000/categories/628616fc803a499bc6c9a95d
+
+####    
+
+PATCH http://localhost:5000/products/62873ad8f521ce5771f0ea53
+Content-Type: application/json
+
+{
+    "name": "Al Fahad cateName 05....",
+    "discription": "Al Fahad cateDiscription....",
+    "permalink": "Al Fahad cateSlug....",
+    "location": "Al Fahad catPermalink....",
+    "price": "Al Fahad cateName 05....",
+    "discount": "Al Fahad cateDiscription....",
+    "taxstatus": "Al Fahad cateSlug....",
+    "taxclass": "Al Fahad catPermalink....",
+    "currency": "Al Fahad catPermalink...."
 }

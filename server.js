@@ -11,13 +11,14 @@ const api = require('./models/database_connected')
 const mongoose = require("mongoose");
 const path = require("path");
 const categories = require("./routes/categories")
+const products = require("./routes/products")
 var cors = require('cors')
 
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')))
 
 app.use(cors())
-
+    
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*") 
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept") 
@@ -32,6 +33,7 @@ app.use(express.json())
 app.use('/api', api)
 app.use('/categories', api)
 app.use('/categories', categories)
+app.use('/products', products)
 
 
 const posts = [
